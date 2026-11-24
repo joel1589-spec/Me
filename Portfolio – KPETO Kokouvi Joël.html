@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>KPETO Kokouvi Joël – Technicien support système et réseau, cybersécurité</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@500;700&family=Public+Sans:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  color-scheme:dark;
+  --bg:#070d1f; --panel:#0d1630; --line:#1b2a52;
+  --text:#e6ecff; --muted:#93a1c9;
+  --blue:#2f6bff; --cyan:#22d3ee;
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px);
+  padding-bottom:env(safe-area-inset-bottom,0px);
+}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+*,*::before,*::after{box-sizing:inherit}
+body{margin:0;background:var(--bg);color:var(--text);font:400 1rem/1.65 "Public Sans",system-ui,sans-serif}
+h1,h2,h3{font-family:Sora,system-ui,sans-serif;line-height:1.15;margin:0}
+a{color:var(--cyan)}
+:focus-visible{outline:2px solid var(--cyan);outline-offset:3px}
+.wrap{max-width:1040px;margin:0 auto;padding:0 1.25rem}
+nav{display:flex;justify-content:space-between;align-items:center;padding:1.1rem 0;gap:1rem;flex-wrap:wrap}
+nav b{font-family:Sora,sans-serif}
+nav ul{display:flex;gap:1.1rem;list-style:none;margin:0;padding:0;flex-wrap:wrap}
+nav a{color:var(--muted);text-decoration:none;font-size:.92rem}
+nav a:hover{color:var(--text)}
+.hero{display:grid;grid-template-columns:1.1fr 1fr;gap:2rem;align-items:center;padding:3rem 0 4rem}
+.hero h1{font-size:clamp(2.2rem,5vw,3.6rem);font-weight:700}
+.role{color:var(--cyan);font-family:Sora,sans-serif;font-weight:500;margin:.9rem 0}
+.hero p{color:var(--muted);max-width:52ch}
+.tags{display:flex;flex-wrap:wrap;gap:.5rem;margin:1.2rem 0 1.6rem;padding:0;list-style:none}
+.tags li{border:1px solid var(--line);background:var(--panel);padding:.25rem .75rem;border-radius:999px;font-size:.88rem}
+.btn{display:inline-block;padding:.7rem 1.2rem;border-radius:8px;font-weight:500;text-decoration:none;margin-right:.6rem;margin-bottom:.5rem}
+.btn.p{background:var(--blue);color:#fff}
+.btn.s{border:1px solid var(--cyan);color:var(--cyan)}
+.btn:hover{filter:brightness(1.15)}
+.avatar{width:112px;height:112px;border-radius:50%;object-fit:cover;border:2px solid var(--cyan);display:block;margin-bottom:1.2rem}
+svg.topo{width:100%;height:auto}
+.node rect{fill:var(--panel);stroke:var(--line)}
+.node.hot rect{stroke:var(--cyan)}
+.node text{fill:var(--text);font:500 13px "Public Sans",sans-serif;text-anchor:middle}
+.link{stroke:var(--blue);stroke-width:2;fill:none;stroke-dasharray:6 8;animation:flow 1.6s linear infinite}
+@keyframes flow{to{stroke-dashoffset:-28}}
+section{padding:2.5rem 0 3.5rem}
+section h2{font-size:1.7rem;margin-bottom:1.4rem}
+h3.sub{font-size:1.05rem;color:var(--cyan);margin:2rem 0 .9rem}
+.lead{max-width:68ch;color:var(--muted)}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1rem}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:1.2rem}
+.card h3{font-size:1.05rem;margin-bottom:.5rem}
+.card p,.card li{color:var(--muted);font-size:.95rem}
+.card p{margin:0}
+.card ul{margin:.6rem 0 0;padding-left:1.1rem}
+.card .when{color:var(--cyan);font-size:.88rem;margin-bottom:.5rem}
+.skills{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1rem}
+.skills div{border-left:3px solid var(--blue);padding:.2rem 0 .2rem .9rem}
+.skills b{display:block;font-family:Sora,sans-serif;font-size:.95rem}
+.skills span{color:var(--muted);font-size:.93rem}
+footer{border-top:1px solid var(--line);padding:2rem 0;color:var(--muted);font-size:.9rem}
+@media(max-width:780px){.hero{grid-template-columns:1fr;padding-top:1.5rem}}
+@media(prefers-reduced-motion:reduce){.link{animation:none}html{scroll-behavior:auto}}
+nav{border-bottom:1px solid var(--line)}
+nav a[aria-current]{color:var(--cyan)}
+.view[hidden]{display:none}
+.hero .role{color:var(--cyan)}
+.status{display:flex;gap:.6rem;align-items:center;border:1px solid var(--line);background:var(--panel);border-radius:8px;padding:.5rem .8rem;font-size:.92rem;margin:.2rem 0 1rem;max-width:52ch}
+.status::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--cyan);flex:none}
+.tile{display:block;text-decoration:none;color:inherit}
+.tile:hover{border-color:var(--cyan)}
+.photos{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:.5rem;margin-top:.8rem}
+.photos img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:8px;border:1px solid var(--line)}
+</style>
+</head>
+<body>
+<div class="wrap">
+<nav aria-label="Navigation principale">
+  <a href="#accueil"><b>K. Joël</b></a>
+  <ul>
+    <li><a href="#accueil" data-v="accueil">À propos</a></li>
+    <li><a href="#competences" data-v="competences">Compétences</a></li>
+    <li><a href="#projets" data-v="projets">Projets</a></li>
+    <li><a href="#certifications" data-v="certifications">Certifications</a></li>
+    <li><a href="#experience" data-v="experience">Expérience</a></li>
+    <li><a href="#evenements" data-v="evenements">Événements</a></li>
+    <li><a href="#contact" data-v="contact">Contact</a></li>
+  </ul>
+</nav>
+</div>
+
+<main class="wrap">
+
+<section class="view" id="v-accueil">
+  <div class="hero">
+    <div>
+      <img class="avatar" alt="Portrait de KPETO Kokouvi Joël" width="112" height="112" src="data:image/jpeg;base64,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">
+      <h1>KPETO Kokouvi Joël</h1>
+      <p class="role">Technicien support système et réseau · firewalls, Active Directory, cybersécurité</p>
+      <div class="status">Actuellement en stage professionnel chez Silhouette Info, technicien et support informatique et réseau</div>
+      <p>Technicien systèmes, réseaux et sécurité. J’administre Windows Server et Active Directory, Linux, des réseaux LAN et WAN (VLAN, routage OSPF, EIGRP et BGP, DHCP, DNS, VPN) et des pare-feu FortiGate. Je suis étudiant en licence d’informatique, spécialité cybersécurité, à l’IPNET.</p>
+      <p style="margin-top:.8rem">Autonome, organisé et rigoureux, je m’appuie sur des diagnostics méthodiques et je livre dans les délais. Le développement web est un savoir-faire que j’ai appris et que je pratique en parallèle.</p>
+      <!-- À COMPLÉTER : votre motivation et vos objectifs professionnels (ajoutez un paragraphe ici). -->
+      <ul class="tags">
+        <li>Administration réseau</li>
+        <li>Windows Server et Active Directory</li>
+        <li>FortiGate</li>
+        <li>Cybersécurité</li>
+      </ul>
+      <a class="btn p" href="#competences">Mes compétences</a>
+      <a class="btn s" href="#contact">Me contacter</a>
+      <!-- CV : décommentez et remplacez le lien par votre PDF.
+      <a class="btn s" href="VOTRE-CV.pdf" download>Télécharger mon CV</a>
+      -->
+    </div>
+    <svg class="topo" viewBox="0 0 420 340" role="img" aria-label="Schéma d’un réseau segmenté : Internet, pare-feu, commutateur, serveurs et supervision">
+      <path class="link" d="M210 52 V92"/><path class="link" d="M210 132 V172"/>
+      <path class="link" d="M210 212 L90 252"/><path class="link" d="M210 212 V252"/><path class="link" d="M210 212 L330 252"/>
+      <g class="node"><rect x="150" y="12" width="120" height="40" rx="8"/><text x="210" y="37">Internet</text></g>
+      <g class="node hot"><rect x="150" y="92" width="120" height="40" rx="8"/><text x="210" y="117">Pare-feu</text></g>
+      <g class="node"><rect x="150" y="172" width="120" height="40" rx="8"/><text x="210" y="197">Commutateur, VLAN</text></g>
+      <g class="node"><rect x="30" y="252" width="120" height="40" rx="8"/><text x="90" y="277">Serveurs Linux</text></g>
+      <g class="node"><rect x="150" y="252" width="120" height="40" rx="8"/><text x="210" y="277">Windows Server</text></g>
+      <g class="node hot"><rect x="270" y="252" width="120" height="40" rx="8"/><text x="330" y="277">Supervision</text></g>
+    </svg>
+  </div>
+  <div class="grid">
+    <div class="card"><h3>Formation</h3><p>Licence en informatique, spécialité cybersécurité, IPNET Institute of Technology, Lomé, 2024 à 2027.<br>Baccalauréat série D, mention Très Bien, Lycée Vogan 2, 2022 à 2023.</p></div>
+    <div class="card"><h3>Langues</h3><p>Français courant<br>Anglais intermédiaire</p></div>
+    <div class="card"><h3>Qualités professionnelles</h3><ul><li>Autonomie et organisation</li><li>Respect des délais</li><li>Esprit d’analyse et diagnostic méthodique</li><li>Rigueur et discrétion sur les données</li><li>Pédagogie auprès des utilisateurs</li></ul></div>
+  </div>
+  <h3 class="sub">Explorer</h3>
+  <div class="grid">
+    <a class="card tile" href="#competences"><h3>Compétences</h3><p>Systèmes, réseaux, sécurité et supervision.</p></a>
+    <a class="card tile" href="#projets"><h3>Projets</h3><p>Laboratoires réseau, FortiGate, Active Directory, analyse de malware.</p></a>
+    <a class="card tile" href="#certifications"><h3>Certifications</h3><p>Huit certifications en cybersécurité et réseau.</p></a>
+    <a class="card tile" href="#experience"><h3>Expérience</h3><p>Silhouette Info et activité en indépendant.</p></a>
+    <a class="card tile" href="#evenements"><h3>Événements</h3><p>CTF, hackathons, master classes et autres rencontres.</p></a>
+  </div>
+</section>
+
+<section class="view" id="v-competences" hidden>
+  <h2>Compétences techniques</h2>
+  <div class="skills">
+    <div><b>Systèmes</b><span>Windows Server, Active Directory (comptes, groupes, droits d’accès, GPO), Linux (Ubuntu, Kali), PowerShell, virtualisation VMware</span></div>
+    <div><b>Réseaux</b><span>LAN et WAN, TCP/IP, DNS, DHCP, HTTP et HTTPS, VPN, VLAN, routage (OSPF, EIGRP, BGP), NAT, ACL, Wi-Fi</span></div>
+    <div><b>Sécurité périmétrique</b><span>Pare-feu FortiGate : politiques, VPN, IPS, RADIUS</span></div>
+    <div><b>Cybersécurité</b><span>Analyse de vulnérabilités, OWASP, analyse de logs, sécurité des postes, gestion d’incidents</span></div>
+    <div><b>Supervision et analyse</b><span>SolarWinds, Wazuh, Wireshark, Nmap, Nessus</span></div>
+    <div><b>Support et exploitation</b><span>Installation de systèmes et de logiciels, diagnostic et résolution de pannes matérielles, logicielles et réseau, SAV</span></div>
+    <div><b>Cloud et scripts</b><span>Microsoft Azure, Python, Bash</span></div>
+    <div><b>Développement web (en parallèle)</b><span>TypeScript, JavaScript, React, Django, SQL, Git et GitHub, paiements en ligne</span></div>
+  </div>
+  <!-- À COMPLÉTER : un niveau honnête par compétence (notions, pratique en laboratoire, autonome) dans les <span>. -->
+</section>
+
+<section class="view" id="v-projets" hidden>
+  <h2>Projets et laboratoires</h2>
+  <h3 class="sub">Réseaux, systèmes et sécurité</h3>
+  <div class="grid">
+    <article class="card"><h3>Réseau multi-sites (EVE-NG)</h3><ul><li>Déploiement d’un réseau d’entreprise multi-sites avec OSPF, EIGRP et BGP.</li><li>Redondance, routage dynamique et sécurité réseau.</li><li>Tests de résilience et résolution d’incidents de routage.</li></ul></article>
+    <article class="card"><h3>Fortinet Security Labs</h3><ul><li>Configuration de pare-feu FortiGate.</li><li>VPN, IPS, RADIUS et politiques de sécurité.</li></ul></article>
+    <article class="card"><h3>Laboratoire Active Directory</h3><ul><li>Déploiement d’un domaine Active Directory.</li><li>Gestion des utilisateurs, des groupes et des stratégies GPO.</li></ul></article>
+    <article class="card"><h3>Supervision réseau</h3><ul><li>Monitoring d’un parc informatique virtuel avec SolarWinds : analyse du trafic et alertes.</li></ul></article>
+    <article class="card"><h3>Laboratoires Microsoft Azure (AZ-104)</h3><ul><li>Création et administration de ressources Azure.</li><li>Configuration réseau et machines virtuelles.</li></ul></article>
+    <article class="card"><h3>DexShield, scanner réseau et audit de sécurité</h3><ul><li>Outil de découverte réseau et de détection de services.</li><li>Analyse des ports ouverts et évaluation des risques.</li></ul></article>
+    <article class="card"><h3>Analyse de malware avec CAPEv2</h3><ul><li>Environnement d’analyse dynamique avec la sandbox CAPEv2.</li><li>Exécution d’échantillons et analyse du comportement (processus, réseau, persistance).</li><li>Extraction d’indicateurs de compromission et rédaction de rapports.</li></ul></article>
+    <article class="card"><h3>Minifilter (en cours)</h3><ul><li>Pilote de sécurité de type antivirus en C/C++ (WDK).</li><li>Analyse des fichiers en temps réel, interception des accès disque et blocage des processus malveillants.</li></ul></article>
+    <article class="card"><h3>SP Sentinel Togo</h3><p>Protection contre les fraudes numériques.</p></article>
+  </div>
+
+  <h3 class="sub">Développement web, pratiqué en parallèle</h3>
+  <div class="grid">
+    <article class="card"><h3>Gestion de stock avec IA</h3><p>Application pour Silhouette Info : suggestion de prix et enregistrement automatique des entrées et sorties.</p></article>
+    <article class="card"><h3>SchoolManager Pro</h3><p>Gestion d’école avec paiements et notifications automatiques aux parents.</p></article>
+    <article class="card"><h3>Casting</h3><p>Vote en ligne avec paiements intégrés pour un organisateur de concours de beauté.</p></article>
+    <article class="card"><h3>Professeur, WebAcademy, GoldenFortune</h3><p>Vente de livres et de services en ligne, plateforme de centre de formation, plateforme d’affiliation.</p></article>
+    <article class="card"><h3>SecurePass</h3><p>Gestionnaire de mots de passe : un coffre-fort pour les comptes de plusieurs plateformes.</p></article>
+    <article class="card"><h3>Innovateurs Intelligents (chef d’équipe)</h3><p>HemoLink, MediTrack-Pro, LexIA, AGRIRISK-IA et Velqix : plateformes avec IA et paiements. Responsable de la qualité, des choix technologiques et du back-end.</p></article>
+  </div>
+  <!-- À COMPLÉTER pour chaque projet : architecture, résultats, captures d’écran.
+       Pour ajouter un lien dans une carte : <p><a href="URL">Voir le dépôt</a></p> -->
+</section>
+
+<section class="view" id="v-certifications" hidden>
+  <h2>Certifications</h2>
+  <div class="grid">
+    <article class="card"><h3>Certified SME Cyber Security Officer (CSCSO)</h3></article>
+    <article class="card"><h3>Certified Ransomware Protection Officer (CRPO)</h3></article>
+    <article class="card"><h3>Certified Cybersecurity Foundations (CORE)</h3></article>
+    <article class="card"><h3>Ethical Hacker</h3></article>
+    <article class="card"><h3>Endpoint Security</h3></article>
+    <article class="card"><h3>Networking Devices and Initial Configuration</h3></article>
+    <article class="card"><h3>Trust and Security with Google Cloud</h3></article>
+    <article class="card"><h3>Introduction to Cryptography</h3></article>
+  </div>
+  <!-- À COMPLÉTER : organisme, date et lien de vérification dans chaque carte, par exemple <p>Organisme, année. <a href="URL">Vérifier</a></p> -->
+</section>
+
+<section class="view" id="v-experience" hidden>
+  <h2>Expérience professionnelle</h2>
+  <div class="grid">
+    <article class="card"><h3>Technicien informatique et support, Silhouette Info</h3><p class="when">Stage professionnel, depuis le 28 sept. 2026 · Lomé</p><p>Intégrateur réseaux, informatique et télécoms.</p>
+      <!-- À AJUSTER : ajoutez la date de fin du stage si nécessaire. -->
+      <ul>
+        <li>Support utilisateurs : interlocuteur technique principal du personnel, dépannage des postes (terminal, PowerShell) avec un diagnostic par hypothèses.</li>
+        <li>Diagnostic réseau : cause d’un blocage d’accès au site web de l’entreprise depuis le réseau interne (tests comparatifs, analyse IP publique et NAT), résolu avec le prestataire du site.</li>
+        <li>Installation et configuration de Windows sur des postes neufs : comptes, pilotes, mises à jour, contrôle final avant livraison.</li>
+        <li>Sécurité des postes : inventaire et suppression des applications inutiles ou suspectes, contrôle des programmes au démarrage, sensibilisation (mots de passe, verrouillage de session) et recommandations (antivirus, sauvegardes, comptes séparés).</li>
+        <li>SAV : diagnostic, solution ou orientation vers le fournisseur, suivi du client.</li>
+      </ul></article>
+    <article class="card"><h3>Technicien informatique indépendant</h3><p class="when">2024 à aujourd’hui · Lomé</p><p>Installation et dépannage.</p>
+      <ul>
+        <li>Installation et configuration de systèmes d’exploitation pour des particuliers et des professionnels.</li>
+        <li>Diagnostic et résolution de problèmes sur ordinateurs : logiciels, système, configuration.</li>
+      </ul></article>
+  </div>
+</section>
+
+<section class="view" id="v-evenements" hidden>
+  <h2>Événements</h2>
+  <p class="lead">Les CTF, hackathons, master classes et autres rencontres auxquels je participe.</p>
+  <!-- À COMPLÉTER : décommentez et copiez les blocs ci-dessous, un par événement, du plus récent au plus ancien.
+       Supprimez les catégories que vous n'utilisez pas.
+       PHOTOS : les images hébergées ailleurs sont bloquées sur cette page. Il faut les intégrer dans le fichier
+       (src="data:image/jpeg;base64,..."). Envoyez-les à Claude pour qu'il le fasse à votre place.
+
+  <h3 class="sub">CTF</h3>
+  <div class="grid">
+    <article class="card">
+      <h3>Nom de l’événement</h3>
+      <p class="when">CTF · date · lieu ou en ligne · seul ou en équipe</p>
+      <p>Votre rôle, ce que vous avez appris et le résultat (classement, prix, certificat).</p>
+      <ul>
+        <li>Catégories ou défis résolus</li>
+        <li>Outils utilisés</li>
+      </ul>
+      <div class="photos">
+        <img src="data:image/jpeg;base64,..." alt="Description de la photo">
+        <img src="data:image/jpeg;base64,..." alt="Description de la photo">
+      </div>
+      <p style="margin-top:.8rem"><a href="URL">Write-up, certificat ou page de l’événement</a></p>
+    </article>
+  </div>
+
+  <h3 class="sub">Hackathons</h3>
+  <div class="grid">
+    <article class="card">
+      <h3>Nom de l’événement</h3>
+      <p class="when">Hackathon · date · lieu · équipe</p>
+      <p>Le projet réalisé, votre rôle, les technologies utilisées et le résultat.</p>
+      <div class="photos"><img src="data:image/jpeg;base64,..." alt="Description de la photo"></div>
+      <p style="margin-top:.8rem"><a href="URL">Lien du projet ou de l’événement</a></p>
+    </article>
+  </div>
+
+  <h3 class="sub">Master classes et conférences</h3>
+  <div class="grid">
+    <article class="card">
+      <h3>Nom de l’événement</h3>
+      <p class="when">Master class · date · lieu ou en ligne · intervenant ou organisateur</p>
+      <p>Le sujet abordé et ce que vous en retenez.</p>
+      <div class="photos"><img src="data:image/jpeg;base64,..." alt="Description de la photo"></div>
+    </article>
+  </div>
+  -->
+</section>
+
+<section class="view" id="v-contact" hidden>
+  <h2>Contact</h2>
+  <p class="lead">Une question, une opportunité ou un projet à partager : écrivez-moi.</p>
+  <div class="grid" style="margin-top:1rem">
+    <div class="card"><h3>Email</h3><p><a href="mailto:Joelkpeto204@gmail.com">Joelkpeto204@gmail.com</a></p></div>
+    <div class="card"><h3>WhatsApp</h3><p><a href="https://wa.me/22871276330">+228 71 27 63 30</a></p></div>
+    <div class="card"><h3>GitHub</h3><p><a href="https://github.com/joel1589-spec">github.com/joel1589-spec</a></p></div>
+    <div class="card"><h3>Localisation</h3><p>Lomé, Agoé, Togo</p></div>
+    <!-- LINKEDIN : décommentez et vérifiez le lien (celui de votre CV : linkedin.com/in/kokouvijoelkpeto)
+    <div class="card"><h3>LinkedIn</h3><p><a href="https://www.linkedin.com/in/kokouvijoelkpeto">Mon profil</a></p></div>
+    -->
+  </div>
+</section>
+
+</main>
+<footer><div class="wrap">KPETO Kokouvi Joël · Lomé, Togo</div></footer>
+
+<script>
+(function(){
+  var views=["accueil","competences","projets","certifications","experience","evenements","contact"];
+  function show(){
+    var h=location.hash.slice(1);
+    if(views.indexOf(h)<0)h="accueil";
+    views.forEach(function(v){document.getElementById("v-"+v).hidden=(v!==h);});
+    document.querySelectorAll("nav a[data-v]").forEach(function(a){
+      if(a.dataset.v===h)a.setAttribute("aria-current","page");else a.removeAttribute("aria-current");
+    });
+    window.scrollTo(0,0);
+  }
+  addEventListener("hashchange",show);
+  show();
+})();
+</script>
+</body>
+</html>
